@@ -18,7 +18,7 @@ class classroom:
         return ''
     def display(self):
         for key in self.students:
-            print(key)
+            print(f'id:{key['id']}, name:{key['name']}, score:{key['score']}')
         return ''
     def search_by_name(self,s):
         for i in self.students:
@@ -31,7 +31,6 @@ class classroom:
                 return i['score']
         return 'sinh vien khong ton tai'
 s1=classroom()
-s1.display()
 print('''
 ================ Classroom Data Manager ================
                 Chọn thao tác thực hiện:
@@ -58,6 +57,7 @@ while True:
     elif choice=='4':
         m=input()
         print(s1.search_by_id(m))
+
 
 
 
